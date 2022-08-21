@@ -48,7 +48,7 @@ use {
     'shiradofu/refresh.nvim',
   },
   config = function()
-    require('project-note').setup {
+    require('door2note').setup {
       -- setup here...
     }
   end,
