@@ -68,6 +68,7 @@ require('door2note').setup {
   note_dir = vim.env.HOME .. '/workspace/notes',
 
   -- Patterns to find project root. Lua patterns are accepted.
+  -- This is a default value.
   root_patterns = { '/%.git$' },
 
   -- Function making a note path from a project root path.
