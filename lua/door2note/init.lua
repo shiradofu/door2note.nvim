@@ -196,6 +196,7 @@ end
 function M.open()
   local open_fn = vim.b.door2note_open_fn
     or vim.w.door2note_open_fn
+    or vim.t.door2note_open_fn
     or vim.g.door2note_open_fn
     or 'open_normal'
   M[open_fn]()

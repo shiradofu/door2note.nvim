@@ -158,6 +158,11 @@ Open a note file according to `config.note_dir` and `config.note_path`. If there
 is already a window that shows the note in the current tab, this simply focus on
 it.
 
-`open()` decides window type depending on `vim.b.door2note_open_fn`,
-`vim.w.door2note_open_fn` or `vim.g.door2note_open_fn`. Its default value is
-`open_normal`.
+`open()` decides window type depending on
+
+- `vim.b.door2note_open_fn`
+- `vim.w.door2note_open_fn`
+- `vim.t.door2note_open_fn`
+- `vim.g.door2note_open_fn`
+
+Its default value is `open_normal`.
