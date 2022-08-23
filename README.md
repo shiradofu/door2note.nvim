@@ -105,7 +105,7 @@ require('door2note').setup {
 
   float_window = {
     -- Spec of width/height is the same as config.window.
-    -- zindex and border is directly passed to nvim_open_win().
+    -- zindex and border is directly passed to `nvim_open_win()`.
     width = 0.8,
     height = 0.8,
     zindex = 50,
@@ -155,7 +155,8 @@ Vim commands:
 ```
 
 Open a note file according to `config.note_dir` and `config.note_path`. If there
-is already a window that shows the note in the current tab, simply focus on it.
+is already a window that shows the note in the current tab, this simply focus on
+it.
 
 `open()` decides window type depending on `vim.b.door2note_open_fn`,
 `vim.w.door2note_open_fn` or `vim.g.door2note_open_fn`. Its default value is
