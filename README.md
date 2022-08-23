@@ -2,6 +2,8 @@
   <h1 align="center">🚪door2note.nvim</h1>
 </p>
 
+<img width="1512" alt="Screen Shot 2022-08-24 at 0 06 08" src="https://user-images.githubusercontent.com/43514606/186194036-6be99cad-79d0-4886-8b03-1140e2731758.png">
+
 Note: still on alpha stage, public APIs might be changed.
 
 ## 📐 Motivation
