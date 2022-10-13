@@ -134,9 +134,11 @@ function M._find_or_create_buf()
     util.err("config.note_dir '%s' is not a directory.", M.config.note_dir)
     return
   end
-  local note_fullpath = M.config.note_dir .. note_path
+  local note_fullpath = (M.config.note_dir .. note_path):gsub('//', '/')
+
   if vim.fn.filereadable(note_fullpath) == 0 then
-    local ok = job_sync('mkdir', '-p', note_fullpath:gsub('/[^/]+/?$', ''))
+    local dir = note_fullpath:gsub('/[^/]+/?$', '')
+    local ok = job_sync('mkdir', '-p', dir)
     if ok then ok = job_sync('touch', note_fullpath) end
     if not ok then
       util.err("Failed to create a new file '%s'", note_fullpath)
